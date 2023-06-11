@@ -18,6 +18,7 @@ body{
     display: flex;
     width: fit-content;
     align-items: center;
+    flex-direction: column;
 }
 
 button{
