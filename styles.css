@@ -17,6 +17,7 @@ body{
     padding: 10px;
     display: flex;
     width: fit-content;
+    align-items: center;
 }
 
 button{
@@ -29,6 +30,7 @@ button{
     cursor: pointer;
     width: fit-content;
     align-self: center;
+    margin: 10px;
 }
 
 

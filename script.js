@@ -16,12 +16,24 @@ function addBookToLibrary(book) {
 
 let library = document.querySelector('.library');
 
+function removeBookFromLibrary(book) {
+    myLibrary.splice(myLibrary.indexOf(book), 1);
+    render();
+}
+
+
 function render() {
     library.innerHTML = '';
     myLibrary.forEach(element => {
         const bookCard = document.createElement('div');
         bookCard.classList.add('card');
+        bookCard.setAttribute('data-index', myLibrary.indexOf(element));
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', function() {removeBookFromLibrary(element)
+        });
         bookCard.textContent = element.info();
+        bookCard.appendChild(removeButton);
         library.appendChild(bookCard);
     });
 }
